@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsZfnU3MEK4TPWwFWLewfdxsNmrGrftQ4&callback=initMap" type="text/javascript"></script>
+        <style type="text/css">
+	        #map 
+            {
+  			    width: 400px;
+  			    height: 400px;
+  	        }
+            body
+            {
+                background-image: url("./gearthdv.jpg");
+                background-size: cover;
+            }
+            #demo
+            {
+                color: white;
+            }
+        </style>
+        <script type="text/javascript">
+
+  		    x = navigator.geolocation;
+
+  		    x.getCurrentPosition(success, failure);
+
+  		    function success(position)
+  		    {
+  			    var myLat = position.coords.latitude;
+  			    var myLong = position.coords.longitude;
+
+  			    //alert(myLat);
+
+  			    var coords = new google.maps.LatLng(myLat,myLong);
+
+  			    var mapOptions = 
+                {
+  				    zoom:11,
+  				    center: coords,
+  				    mapTypeId: google.maps.MapTypeId.ROADMAP
+  			    }
+
+  			    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  			    var marker = new google.maps.Marker({map:map, position:coords});	
+  		    }
+
+  		    function failure(){ }
+        </script>
+    </head>
+
+    <body>
+	    <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Get Your Location Lattitude/Longitude</button>
+        <p id="demo"></p>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() 
+            {
+                if (navigator.geolocation) 
+                {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } 
+                else 
+                { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) 
+            {
+                x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;  
+            }
+            
+            function showError(error) 
+            {
+                switch(error.code) 
+                {
+                  case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                  case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                  case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                  case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+                }
+            }
+        </script>
+        <div id="map"></div>
+    </body>
+</html>

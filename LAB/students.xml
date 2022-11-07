@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl "href="D:\SEM 5 programming\WP\LAB\studentrule.xsl" ?>
+ <student>
+  <s>
+   <name> Dhruv Prafulbhai Varia </name>
+   <branch> CSE</branch>
+   <age>19</age>
+   <city> Banglore </city>
+  </s>
+  <s>
+   <name> Diksha Manish Mehta </name>
+   <branch> BBA</branch>
+   <age> 19</age>
+   <city> Vadoara </city>
+  </s>
+  <s> 
+   <name> Upal Vasava</name>
+   <branch> CSE</branch>
+   <age> 21</age>
+   <city> Banglore</city>
+  </s>
+  <s> 
+   <name> Dhairya Amin</name>
+   <branch> MBBS</branch>
+   <age> 20</age>
+   <city> Udaipur</city>
+  </s>
+  <s> 
+   <name> Lucky Pathan</name>
+   <branch> IT</branch>
+   <age> 22</age>
+   <city> Indore</city>
+  </s>
+ </student>

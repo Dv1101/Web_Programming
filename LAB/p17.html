@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("i11.webp");
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Create Object from JSON String</h2>
+        <p id="d1"></p>
+        <p id="d2"></p>
+        <p id="d3"></p>
+        <script>
+            let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]}';
+
+            const obj = JSON.parse(text);
+            document.getElementById("d1").innerHTML = obj.employees[0].firstName + " " + obj.employees[0].lastName;
+            document.getElementById("d2").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
+            document.getElementById("d3").innerHTML = obj.employees[2].firstName + " " + obj.employees[2].lastName;
+        </script>
+    </body>
+</html>

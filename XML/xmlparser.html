@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p id="parul"></p>
+        <script>
+            var t,p,xDoc;
+
+            t="<students><student>"+"<name>Priyanka Patel</name>"
+                "<batch>2015</batch>"+"<age>23</age>"+"<students><student>";
+
+            p=new DOMParser();
+            xDoc = p.parseFromString(t,"text/xml");
+
+            document.getElementById("parul").innerHTML=x.Doc.getElementByIdTagName("name")[0].childNodes[0].nedeValue;
+        </script>
+    </body>
+</html>

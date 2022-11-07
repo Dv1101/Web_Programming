@@ -1,0 +1,88 @@
+<html>
+    <head><title>Practical 11</title></head>
+    <body>
+        <h1> Demo of Javascript Arrays</h1>
+        <b><p id="datee"></p></b>
+        <p id = "demo"></p>
+        <p id="arry"></p>
+        <p id="arry2"></p>
+        <p id="ccat"></p>
+        <p id="jjoin"></p>
+        <p id="ppop"></p>
+        <p id="ppush"></p>
+        <p id="sshift"></p>
+        <p id="sslice"></p>
+
+        <button onclick="parul()">welcome button</button>
+        <button onclick="arrayshow1()">Show array 1 Elements</button>
+        <button onclick="arrayshow2()">Show array 2 Elements</button>
+        <button onclick="concat()">Concat arrays</button>
+        <button onclick="join()">Join & add substring in arrays</button>
+        <button onclick="pop()">POP</button>
+        <button onclick="push()">Push</button>
+        <button onclick="shift()">shift</button>
+        <button onclick="slice()">slice</button>
+        
+
+        <script>
+            var date = new Date();
+            document.getElementById("datee").innerHTML = date;
+            var students=["Dhruv","Diksha","Dhairya","Upal"];
+            var arr2 = ["Emil", "Tobias", "Linus"];
+            
+            function arrayshow1()
+            {
+                let text = students.toString();
+                document.getElementById("arry").innerHTML = text;
+            }
+
+            function arrayshow2()
+            {
+                let text1 = arr2.toString();
+                document.getElementById("arry2").innerHTML = text1;
+            }
+
+            function concat()
+            {
+                const children = students.concat(arr2);     
+                document.getElementById("ccat").innerHTML = children;
+            }
+            function join()
+            {
+                let text2 = students.join(" and ");     
+                document.getElementById("jjoin").innerHTML = text2;
+            }
+
+            function pop()
+            {
+                let text3 = students.pop(" and ");     
+                document.getElementById("ppop").innerHTML = text3;
+            }
+
+            function push()
+            {
+                students.push("Shyam", "Vasu");     
+                document.getElementById("ppop").innerHTML = students;
+            }
+
+            function shift()
+            {
+                students.pop();     
+                document.getElementById("sshift").innerHTML = students;
+            }
+
+            function slice()
+            {
+                const text4 = students.slice(1, 2);
+                document.getElementById("sslice").innerHTML = text4;
+            }
+
+            function parul()
+            {
+            document.getElementById("demo").innerHTML = "Welcome to JavaScript";
+            window.alert(0);
+            }
+
+        </script>
+    </body>
+</html>

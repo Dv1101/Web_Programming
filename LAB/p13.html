@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Practical 13</title>
+        <link rel="stylesheet" type="text/css" href="D:\SEM 5 programming\WP\LAB\p12.css">
+    </head>
+    <body>
+        <h1>Javascript Functions</h1>
+        <button onclick="max()">Find Maximum Number</button>
+        <button onclick="fact()">Find Factorial Number</button>
+
+        <script>
+
+            function max()
+            {
+                const num1 = parseFloat(prompt("Enter First Number: "));
+                const num2 = parseFloat(prompt("Enter Second Number: "));
+                const num3 = parseFloat(prompt("Enter Third Number: "));
+
+            let largest;
+
+            if(num1 >= num2 && num1 >= num3) 
+            {
+                largest = num1;
+            }
+
+            else if (num2 >= num1 && num2 >= num3) 
+            {
+                largest = num2;
+            }
+
+            else 
+            {
+                largest = num3;
+            }
+            alert(largest)
+
+        }
+        
+        function fact(){
+            // take input from the user
+            const number = parseInt(prompt('Enter a positive integer: '));
+            
+            // checking if number is negative
+            if (number < 0) {
+                console.log('Error! Factorial for negative number does not exist.');
+            }
+            
+            // if number is 0
+            else if (number === 0) {
+                console.log(`The factorial of ${number} is 1.`);
+            }
+            
+            // if number is positive
+            else {
+                let fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact *= i;
+                }
+                console.log(`The factorial of ${number} is ${fact}.`);
+                alert(fact)
+            }}
+        </script>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+    <body>
+    <button onclick="max3()">max3</button>
+<   button onclick="fact()">fact</button>
+    
+<script>
+function max3(){
+
+const num1 = parseFloat(prompt("Enter first number: "));
+const num2 = parseFloat(prompt("Enter second number: "));
+const num3 = parseFloat(prompt("Enter third number: "));
+let largest;
+
+if(num1 >= num2 && num1 >= num3) {
+    largest = num1;
+}
+else if (num2 >= num1 && num2 >= num3) {
+    largest = num2;
+}
+else {
+    largest = num3;
+}
+
+// display the result
+
+alert(largest)
+}
+
+
+// program to find the factorial of a number
+function fact(){
+// take input from the user
+const number = parseInt(prompt('Enter a positive integer: '));
+
+// checking if number is negative
+if (number < 0) {
+    console.log('Error! Factorial for negative number does not exist.');
+}
+
+// if number is 0
+else if (number === 0) {
+    console.log(`The factorial of ${number} is 1.`);
+}
+
+// if number is positive
+else {
+    let fact = 1;
+    for (i = 1; i <= number; i++) {
+        fact *= i;
+    }
+    console.log(`The factorial of ${number} is ${fact}.`);
+    alert(fact)
+}}
+
+ </script>
+</body>
+</html> -->

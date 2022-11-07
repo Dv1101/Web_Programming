@@ -1,0 +1,37 @@
+<html> 
+    <head> 
+        <style>
+            body {  
+                background: #C5E1A5; 
+            }
+        </style>
+    </head>
+    <body> 
+        <div>   
+            <form name="myform">    
+                <h4>Registration Page</h4>  
+                <label>     
+                    <input type="text" class="input" name="email" placeholder="EMAIL"/>          
+                </label>       
+                <label>     
+                    <input type="password" class="input" name="password" placeholder="PASSWORD"/>        
+                </label>     
+                <label>     
+                    <input type="text" class="input" name="Phone_No" placeholder="Phone_no"/>      
+                </label>    
+                <button type="submit" onclick="validateForm()">submit</button> 
+            </form> 
+            <script>
+                function validateForm()
+                {
+                    var test = document.forms["myform"]["Phone_No"].value;
+                    if (test == null || test == "")
+                    {
+                        alert("Please enter phone no");
+                        return false;
+                    }
+                }   
+            </script>
+        </div> 
+    </body> 
+</html>

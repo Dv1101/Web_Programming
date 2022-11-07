@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Practical 12</title>
+        <link rel="stylesheet" type="text/css" href="D:\SEM 5 programming\WP\LAB\p12.css">
+    </head>
+    <body>
+        <h1> Alert, Confirm & Prompt Box</h1>
+        <button onclick="parul()">Check Current Day - Week</button><p>Note : Enter Day in lowercase !!</p>
+        <button onclick="bmi()">bmi</button>
+        <script>
+            function parul()
+            {
+            const weekday = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+
+            const d = new Date();
+            let day = weekday[d.getDay()];
+
+            let person = prompt("Enter week-day ");
+            confirm("Press ok button to confirm your input");
+            if (person == day) 
+            {
+
+                window.alert("Hit");
+            }
+            
+            else
+            {
+                window.alert("Missed");
+            }
+            }
+
+            function bmi()
+            {
+                let weight = prompt("enter weight ");
+                let height = prompt("enter height ");
+                let bmi=weight/height^2;
+                window.alert(bmi);
+            }
+        </script>
+   </body>
+</html>

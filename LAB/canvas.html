@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Canva Practical</title>
+        <style>
+            #parul
+                    {
+                        border: 3px solid yellowgreen;
+                    }
+        </style>
+    </head>
+    <body>
+        <canvas id="parul" width="500"height="150">Your browser does not support the HTML canvas tag.</canvas>
+        <p>Image to use:</p>
+        <img id="pepsi" src="D:\SEM 5 programming\WP\LAB\pepsi.png" alt="pepsi" width="100" height="100">
+        <p>Canvas to fill:</p>
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
+        <p>
+            <button onclick="myCanvas()">Try it</button>
+        </p>
+            <script>
+                var c = document.getElementById("parul");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Canvas Drawing Ex.",10,50);
+                function myCanvas() 
+                {
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    var img = document.getElementById("pepsi");
+                    ctx.drawImage(img,10,10);
+                  }
+            </script>
+    </body>
+</html>

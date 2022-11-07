@@ -1,0 +1,16 @@
+<html>
+ <head><title>Welcome</title></head>
+ <body>
+    <p style="color:red">Parul Institute of Engineering & Technology</font></p>
+    <p><i>Parul Institute of Engineering & Technology</i></p>
+<p><b>Parul Institute of Engineering & Technology</b></p>
+<p><u>Parul Institute of Engineering & Technology</u></p>
+<p><strong>Parul Institute of Engineering & Technology</strong></p>
+<p><small>Parul Institute of Engineering & Technology</small></p>
+<p>College<sub>Parul Institute of Engineering & Technology</sub>Name</p>
+<p>College<sup>Parul Institute of Engineering & Technology</sup>Name</p>
+<p>Parul Institute of Engineering & Technology,<ins>waghodia</ins></p>
+<p>Parul Institute of <del>Engineering </del>Technology</p>
+<p><em>Parul Institute of Engineering & Technology</em></p>
+ </body>
+</html>
